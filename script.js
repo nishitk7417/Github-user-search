@@ -46,6 +46,10 @@ async function fetchProfile() {
   const profileContainer = document.getElementById("profile-container");
   profileContainer.innerHTML = "";
 
+  //some fun
+  const ar = ["nishitk7417", "phodal", "singhsanket143","Lubrsi"];
+  let id = Math.floor(Math.random() * ar.length);  
+  document.getElementById("example").textContent = ar[id];
   if (!username) {
     alert("Please enter a GitHub username.");
     return;
@@ -93,7 +97,7 @@ async function fetchProfile() {
         <p>${profile.company || "Not Available"}</p></div>
         </div>
       
-        `;
+        `;//I know this counts as bad coding, will fix it soon.
     profileContainer.appendChild(profileCard);
 
   } catch (error) {
